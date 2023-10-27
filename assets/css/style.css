@@ -1,0 +1,271 @@
+*{
+    overflow-x: hidden;
+    margin:0;
+    scroll-behavior: smooth;
+}
+
+a{
+    color: unset;
+    text-decoration: none;
+}
+
+:root{
+    --color-primary: #0bc5e2;;
+    --color-secondary: #0a1a48;
+}
+.home{
+    width:100vw;
+    height: 100vh;
+    background-image: url("C:/Users/Abdulhamid/Desktop/MelTech/assets/photos/hero-photo.jpg");
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.navbar{
+    height: 70px;
+    width: 100vw;
+    color:var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: absolute;
+}
+
+@media (max-width: 1024px) {
+
+    .home{
+        background-position: -1px;
+    }
+
+    .navbar{
+        margin-top: 4%;
+    }
+
+
+    
+}
+
+
+
+
+ul{
+    display: flex;
+}
+
+.logo, .hero-left{
+    margin-left: 50px
+}
+
+.navbar ul{
+    padding: 10px 0;
+    margin-right: 55PX;
+}
+.navbar ul li{
+    margin: 0 8px;
+    color: var(--color-secondary);
+    padding: 10px 14px;
+    background-color: var(--color-primary);
+    font-size: 16;
+    border-radius: 10px;
+    border: 3px solid var(--color-primary);
+}
+
+
+.navbar ul li:hover{
+    background-color: unset;
+    color: var(--color-primary);
+    transition: 0.7s;
+    border: 3px solid var(--color-primary);
+    transform: scale(1.08)
+}
+
+
+
+
+
+
+@media (max-width: 900px) {
+    .home{
+        background-position: -110px;
+    }
+    .navbar ul{
+        opacity: 0;
+    }
+    /* navbar and maybe texts(hero-left) as well */
+}
+    
+    
+
+ 
+
+
+
+
+.hero{
+    width: 100vw;
+    height:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+.hero-left{
+    width: auto;
+    height: 550;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.texts{ 
+    cursor:default;
+    
+}
+
+
+@media (max-width: 600px) {
+    .home{
+        background-position: -400;
+    }
+    .hero-left{
+        height: 900;
+        justify-content:flex-end;
+        
+    }
+}
+
+
+.pretext{
+    font-size: 17px;
+    font-family:'Courier New'
+}
+.main-text{
+    font-size: 80px;
+    margin-top: -10px;
+    font-family:Impact;
+}
+
+.des{
+    width: 480;
+    margin-top: 15;
+    font-size: 17;
+    font-family:'Courier New';
+    margin-bottom: 30px;
+}
+@media (max-width:1024px) {
+
+    .pretext{
+        font-size: 28;
+    }
+
+    .des{
+        font-size: 22;
+
+    }
+    
+}
+button{
+    margin: 15px;
+    padding:  12px 23px;
+    background-color: #0be1e2;
+    border-radius: 15px;
+    color:#0a1a48;
+    border: 3px #0be1e2 solid;
+    font-size: 16px;
+
+}
+
+button:hover{
+    background-color: unset;
+    color: #0be1e2;
+    transition: .8s;
+    border: 3px #0a1a48 solid;
+    padding-right: 25px;
+    letter-spacing: 0.1cm;
+    box-shadow: 0 0 10px #0be1e2;
+    cursor: pointer;
+}
+
+@media (max-width: 1040px) {
+
+    button{
+        padding: 18px 28px;
+        font-size: 19;
+    }
+    
+}
+
+
+.posts{
+    width: 100vw;
+    height: 80vh;
+    background-color: whitesmoke;
+
+}
+
+.posts-top{
+    margin-top: 35px;
+    margin-left: 30px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.more-blogs{
+    margin-right: 55px;
+}
+.postcards{
+    width: 100vw;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    margin-top: 30px;
+    margin-left: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.card:hover{
+    margin-bottom: 25px;
+    transition: .7s;
+}
+
+.card-content{
+    width: 280px;
+    height:360px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img{
+    width: 100%;
+    height: 180px;
+    border-radius: 15px;
+}
+
+.card-title{
+    margin-left: 3px;
+    margin-top: 2px
+}
+
+.card-description{
+    color: rgb(87, 87, 87);
+    margin-top: 5px;
+    margin-left: 3px
+}
+
+.date{
+    margin-top: 10px;
+    margin-left: 3;
+}
