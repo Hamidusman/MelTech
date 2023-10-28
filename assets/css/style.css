@@ -42,7 +42,7 @@ a{
 .home{
     width:100vw;
     height: 100vh;
-    background-image: url("C:/Users/Abdulhamid/Desktop/MelTech/assets/photos/hero-photo.jpg");
+    background-image: url("C:/Users/Abdulhamid/Desktop/MelTech/assets/photos/human-and-ai.jpg");
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
@@ -56,9 +56,10 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    position: absolute;
-    background-color: #0a1a48;
+    position: fixed;
+    background-color: whitesmoke;
     overflow-y: hidden;
+    animation: fade-down 0.5s;
 }
 
 @media (max-width: 1024px) {
@@ -82,9 +83,13 @@ a{
 ul{
     display: flex;
 }
-
+.logo{
+    
+    font-size: 30;
+    color: var(--color-secondary)
+}
 .logo, .hero-left{
-    margin-left: 50px
+    margin-left: 50px;
 }
 
 .navbar ul{
@@ -118,16 +123,20 @@ ul{
 
 
 @media (max-width: 900px) {
+    .logo{
+        font-size: 24px;
+    }
     .home{
-        background-position: -10px;
+        background-position: -80px;
     }
     .navbar ul{
-        opacity: 0;
+        display: none;
     }
     /* navbar and maybe texts(hero-left) as well */
 }
     
-    
+
+
 
  
 
@@ -139,17 +148,19 @@ ul{
     height:100%;
     display:flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
+    
     
 }
 
 
 .hero-left{
     width: auto;
-    color: whitesmoke;
+    color: #070a16;
     display: flex;
     flex-direction: column;
     justify-content: end;
+    margin-bottom: 30px
 }
 
 
@@ -162,7 +173,7 @@ ul{
 
 @media (max-width: 600px) {
     .home{
-        background-position: -200;
+        background-size: 120vw 100vh;
     }
     .hero{
         align-items: flex-end;
@@ -186,7 +197,7 @@ ul{
     margin-top: 15;
     font-size: 17;
     font-family:'Courier New';
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 @media (max-width:1024px) {
@@ -210,7 +221,7 @@ ul{
 
 
 button{
-    margin: 15px;
+    margin: 10px;
     padding:  12px 23px;
     background-color: #0be1e2;
     border-radius: 15px;
@@ -222,12 +233,12 @@ button{
 
 button:hover{
     background-color: unset;
-    color: #0be1e2;
+    color: #0a1a48;
     transition: .8s;
     border: 3px #0a1a48 solid;
     padding-right: 25px;
     letter-spacing: 0.1cm;
-    box-shadow: 0 0 10px #0be1e2;
+    box-shadow: 0 0 10px #0a1a48;
     cursor: pointer;
 }
 
@@ -291,9 +302,7 @@ button:hover{
     height: auto;
     margin-top: 20px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-evenly; 
 }
 
 .card-texts{
@@ -301,7 +310,7 @@ button:hover{
 }
 .card{
     margin-top: 30px;
-    margin-left: 30px;
+    margin-left: px;
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -314,6 +323,13 @@ button:hover{
     height:360px;
     display: flex;
     flex-direction: column; 
+}
+
+@media (max-width:1024px) {
+    .card-content{
+        width: 160px
+    }
+    
 }
 .card-texts{
     display: flex;
@@ -372,6 +388,8 @@ button:hover{
 
 
 
+
+
 @media (max-width: 1024px) {
     .about .title{
         font-size: 40
@@ -390,7 +408,9 @@ button:hover{
 
 
 @media (max-width: 600px) {
-
+    .card-content{
+        background-color: white
+    }
     .postcards{
         width: 100vw;
         height: auto;
@@ -399,6 +419,10 @@ button:hover{
         justify-content: left;
         align-items: normal;
         flex-wrap: wrap;
+    }
+
+    .card-texts{
+        margin-top: -3px;
     }
 
     .card-description{
@@ -414,15 +438,17 @@ button:hover{
     }
 
     .card-content{
-        width: 440px;     
+        width: 100vw;    
         height: 500px;  
         flex-direction: unset;
         height: auto;
         margin-left: 15px;
-    }
+    }    
+    
     .card-img{
         max-width: 25%;
-        height: 110
+        height: 110;
+        margin-right: 10px;
 
     }
 
@@ -430,3 +456,38 @@ button:hover{
         font-size:small
     }
 }
+
+.about-img{
+    width: 440px;
+    height: 410px;
+}
+
+footer{
+    height:80vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.links{
+    color:#0bc5e2;
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    height: 170; 
+    margin-top: 20px;
+    justify-content: left;
+    align-items: flex-start;
+
+}
+
+.links h4{
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.links ul{
+    
+    display: flex;
+    flex-direction: column;
