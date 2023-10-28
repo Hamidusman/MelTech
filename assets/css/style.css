@@ -4,11 +4,37 @@
     scroll-behavior: smooth;
 }
 
+body{
+}
 a{
     color: unset;
     text-decoration: none;
 }
 
+
+
+@keyframes fade-up {
+    0%{
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes fade-down {
+    0%{
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
 :root{
     --color-primary: #0bc5e2;;
     --color-secondary: #0a1a48;
@@ -25,12 +51,14 @@ a{
 
 .navbar{
     height: 70px;
-    width: 100vw;
+    width: 100%;
     color:var(--color-primary);
     display: flex;
     justify-content: space-between;
     align-items: center; 
     position: absolute;
+    background-color: #0a1a48;
+    overflow-y: hidden;
 }
 
 @media (max-width: 1024px) {
@@ -41,6 +69,7 @@ a{
 
     .navbar{
         margin-top: 4%;
+       
     }
 
 
@@ -60,12 +89,14 @@ ul{
 
 .navbar ul{
     padding: 10px 0;
-    margin-right: 55PX;
+    margin-right: 30PX;
+    animation: fade-down 1s;
+
 }
 .navbar ul li{
     margin: 0 8px;
     color: var(--color-secondary);
-    padding: 10px 14px;
+    padding: 7px 11px;
     background-color: var(--color-primary);
     font-size: 16;
     border-radius: 10px;
@@ -88,7 +119,7 @@ ul{
 
 @media (max-width: 900px) {
     .home{
-        background-position: -110px;
+        background-position: -10px;
     }
     .navbar ul{
         opacity: 0;
@@ -115,7 +146,6 @@ ul{
 
 .hero-left{
     width: auto;
-    height: 550;
     color: whitesmoke;
     display: flex;
     flex-direction: column;
@@ -125,6 +155,7 @@ ul{
 
 .texts{ 
     cursor:default;
+    animation: fade-down 0.9s;
     
 }
 
@@ -151,7 +182,7 @@ ul{
 }
 
 .des{
-    width: 480;
+    width: 480;;
     margin-top: 15;
     font-size: 17;
     font-family:'Courier New';
@@ -161,11 +192,15 @@ ul{
 @media (max-width:1024px) {
 
     .pretext{
-        font-size: 28;
+        font-size: 14;
+    }
+    .main-text{
+        font-size: 65;
     }
 
     .des{
-        font-size: 22;
+        width: 370px;
+        font-size: 12;
         margin-bottom: 10px;
 
     }
@@ -199,7 +234,7 @@ button:hover{
 @media (max-width: 1040px) {
 
     button{
-        padding: 18px 28px;
+        padding: 7px 18px;
         margin-top: 5px;
         font-size: 19;
     }
@@ -208,8 +243,13 @@ button:hover{
 
 @media (max-width: 600px) {
 
+    .home{
+        background-position: -70px;
+    }
+
     button{
         padding:  7px 12px;
+        font-size: medium;
 
     }
     .pretext{
@@ -251,9 +291,13 @@ button:hover{
     height: auto;
     margin-top: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.card-texts{
+    display: flex;
 }
 .card{
     margin-top: 30px;
@@ -269,17 +313,22 @@ button:hover{
     width: 280px;
     height:360px;
     display: flex;
+    flex-direction: column; 
+}
+.card-texts{
+    display: flex;
     flex-direction: column;
 }
+
  
 .card-img{
     width: 100%;
     height: 180px;
-    border-radius: 15px;
+    border-radius: 0px;
 }
 
 .card-title{
-    margin-left: 3px;
+    margin-left: 1px;
     margin-top: 2px
 }
 
@@ -339,3 +388,45 @@ button:hover{
     margin-top: 15px;
 }
 
+
+@media (max-width: 600px) {
+
+    .postcards{
+        width: 100vw;
+        height: auto;
+        margin-top: 20px;
+        display: flex;
+        justify-content: left;
+        align-items: normal;
+        flex-wrap: wrap;
+    }
+
+    .card-description{
+        display: none;
+    }
+    .card{
+        margin-top: 30px;
+        margin-left: 30px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: unset;
+        margin-left: 0px;
+    }
+
+    .card-content{
+        width: 440px;     
+        height: 500px;  
+        flex-direction: unset;
+        height: auto;
+        margin-left: 15px;
+    }
+    .card-img{
+        max-width: 25%;
+        height: 110
+
+    }
+
+    .card-title{
+        font-size:small
+    }
+}
