@@ -284,6 +284,7 @@ button:hover{
     width: 100vw;
     height: auto;
     background-color: whitesmoke;
+    font-family: sans-serif;
 
 }
 
@@ -367,6 +368,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: sans-serif;
 }
 
 .about .title{
@@ -463,31 +465,51 @@ button:hover{
 }
 
 footer{
-    height:80vh;
+    height:45vh;
     width: 100vw;
-    background-color: black;
+    background-color: #0a1a48;
     display: flex;
     justify-content: space-around;
 }
 
+.link-container{
+    display: flex;
+    justify-content: space-evenly;
+}
 .links{
-    color:#0bc5e2;
     display: flex;
     flex-direction: column;
     width: 140px;
-    height: 170; 
-    margin-top: 20px;
-    justify-content: left;
-    align-items: flex-start;
+    height: auto; 
+    margin-top: 20px; 
+    align-items: center;
+    font-family: sans-serif;
+
 
 }
 
 .links h4{
     font-size: 23px;
     margin-bottom: 15px;
+    color: rgb(117, 117, 117);
 }
 
-.links ul{
+.links a{
     
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
+    font-size: 20px;
+    color: white
+}
+
+@media (max-width: 900px) {
+    .links h4{
+        font-size: 21px;
+    }
+
+    .links a{
+        font-size: 18px;
+    }
+    
+}
